@@ -24,7 +24,7 @@ const postWords = async (req = request, res = response ) => {
     // body 
     const { word, allow } = req.body;
     // Date created
-    const dateCreate = Date.now().toString();
+    let dateCreate = new Date().toUTCString();
     // Model of word
     const data = {
         word,
@@ -57,7 +57,7 @@ const putWords = async(req, res) => {
         });
     }
     // Date created
-    const lastDateUpdated = Date.now().toString();
+    const lastDateUpdated = new Date().toUTCString();
     // Word update
     const wordUpdate = await Words.findByIdAndUpdate( id, { word, allowed: allow, lastDateUpdated }, { new: true });
     // Response
@@ -69,7 +69,7 @@ const deleteWords = async(req, res) => {
     // params
     const { id } = req.params;
     // Date deleted
-    const dateDeleted = Date.now().toString();
+    const dateDeleted = new Date().toUTCString();
     // word deleted logic 
     const { word } = await Words.findByIdAndUpdate( id, { status: 'deleted', dateDeleted }, { new: true });
     // Response

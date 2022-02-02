@@ -12,7 +12,7 @@ API de palabras permitidas
 
 ##  Base de datos
 - Levantar el entorno de MongoDB
-- Crear una base de datos llamada palabras con el comando `use palabras`
+- Abrir la terminar de mongo y crear una base de datos con el comando `use nombre_db`
 - Copiar la cadena de conexión de la base de datos en el archivo .env que se encuentra en la raíz del proyecto y establecer el puerto para la API
 
 Archivo .env

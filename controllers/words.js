@@ -68,8 +68,10 @@ const putWords = async(req, res) => {
 const deleteWords = async(req, res) => {
     // params
     const { id } = req.params;
+    // Date deleted
+    const dateDeleted = Date.now().toString();
     // word deleted logic 
-    const { word } = await Words.findByIdAndUpdate( id, { status: 'deleted' }, { new: true });
+    const { word } = await Words.findByIdAndUpdate( id, { status: 'deleted', dateDeleted }, { new: true });
     // Response
     res.status(200).json({
         status: 200,

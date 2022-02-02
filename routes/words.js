@@ -7,14 +7,18 @@ const { validateFields } = require('../middlewares/validate');
 
 const router = Router();
 
+
 // Get - get word by id 
 router.get('/:id',
-    [
-        check('id', 'El id debe ser un id valido de mongo.id not found').isMongoId(),
-        check('id').custom( verifyId ),
-        validateFields
-    ],getWords 
+[
+    check('id', 'El id debe ser un id valido de mongo.id not found').isMongoId(),
+    check('id').custom( verifyId ),
+    validateFields
+],getWords 
 );
+
+// Get all words
+router.patch('/', searchWords);
 
 // Put - update word by id
 router.put('/:id',

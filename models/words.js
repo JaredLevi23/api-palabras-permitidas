@@ -1,3 +1,4 @@
+// Schema of Word
 const { Schema, model } = require('mongoose');
 
 const WordsSchema = Schema({
@@ -23,6 +24,7 @@ const WordsSchema = Schema({
         type: Date
     }
 });
+
 
 WordsSchema.methods.toJSON = function(){
     const { __v, _id, status, allowed , ...props } = this.toObject();

@@ -7,7 +7,6 @@ class Server{
     constructor(){
         this.app = express();
         this.port = process.env.PORT;
-
         //Connection to bd
         this.connectionDB();
         //Middlewares
@@ -16,6 +15,7 @@ class Server{
         this.routes();
     }
 
+    // Connection db
     async connectionDB(){
         await dbConnection();
     }
@@ -29,6 +29,7 @@ class Server{
         this.app.use( express.static('public') );
     }
 
+    // routes 
     routes(){
         this.app.use( '/api', require('../routes/words') );        
     }

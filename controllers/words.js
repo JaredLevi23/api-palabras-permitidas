@@ -1,6 +1,7 @@
 const { response, request } = require("express");
 const Words = require('../models/words');
 
+// Get word by mongoId
 const getWords = async ( req = request ,res = response  )=>{    
     // params
     const { id } = req.params;
@@ -10,6 +11,7 @@ const getWords = async ( req = request ,res = response  )=>{
     res.status(200).json( word );
 }
 
+// Get all words
 const searchWords = async ( req = request ,res = response  )=>{    
     // query
     const searchData = await Words.find( {status: 'active'} );
@@ -17,7 +19,7 @@ const searchWords = async ( req = request ,res = response  )=>{
     res.status(200).json([...searchData]);
 }
 
-
+// Create word
 const postWords = async (req = request, res = response ) => {
     // body 
     const { word, allow } = req.body;
@@ -38,6 +40,7 @@ const postWords = async (req = request, res = response ) => {
     res.status(201).json( newword );
 };
 
+// Update word by mongoId
 const putWords = async(req, res) => {
     // params
     const { id } = req.params;
@@ -61,6 +64,7 @@ const putWords = async(req, res) => {
     res.status(200).json( wordUpdate );
 }
 
+// Delete by mongoId
 const deleteWords = async(req, res) => {
     // params
     const { id } = req.params;

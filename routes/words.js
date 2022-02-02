@@ -7,6 +7,7 @@ const { validateFields } = require('../middlewares/validate');
 
 const router = Router();
 
+// Get - get word by id 
 router.get('/:id',
     [
         check('id', 'El id debe ser un id valido de mongo.id not found').isMongoId(),
@@ -15,6 +16,7 @@ router.get('/:id',
     ],getWords 
 );
 
+// Put - update word by id
 router.put('/:id',
     [
         check('id', 'El id debe ser un id valido de mongo.id not found').isMongoId(),
@@ -23,6 +25,7 @@ router.put('/:id',
     ], putWords
 );
 
+// Post - create word
 router.post('/',
     [
         check('word', 'word es obligatorio y debe ser una cadena. word not found').isString(),
@@ -31,13 +34,16 @@ router.post('/',
     ], postWords
 );
 
-router.delete('/:id',[
-    check('id', 'El id debe ser un id valido de mongo.id not found').isMongoId(),
-    check('id').custom( verifyId ),
-    validateFields
+// Delete - delete logic by id
+router.delete('/:id',
+    [
+        check('id', 'El id debe ser un id valido de mongo.id not found').isMongoId(),
+        check('id').custom( verifyId ),
+        validateFields
     ], deleteWords
 );
 
+// Get all words 
 router.search( '/' ,searchWords );
 
 module.exports = router;

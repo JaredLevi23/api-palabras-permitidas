@@ -13,6 +13,14 @@ API de palabras permitidas
 ##  Base de datos
 - Levantar el entorno de MongoDB
 - Abrir la terminar de mongo y crear una base de datos con el comando `use nombre_db` ( En el ejercicio la bd se llamo palabras )
+- Insertar un documento y crear la colección words
+	> db.words.insertOne({
+		"word": "Hola mundos",
+		"allowed": false,
+		"status":"deleted",
+		"dateCreate":"2022-02-01T18:26:33.668+00:00",
+		"lastDateUpdated":"2022-02-02T04:45:52.210+00:00"
+		});
 - Copiar la cadena de conexión de la base de datos apuntando a la bd creada en el archivo .env que se encuentra en la raíz del proyecto y establecer el puerto para la API
 
 Archivo .env

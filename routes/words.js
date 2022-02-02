@@ -17,7 +17,7 @@ router.get('/:id',
 ],getWords 
 );
 
-// Get all words
+// Other option to get all words
 router.patch('/', searchWords);
 
 // Put - update word by id

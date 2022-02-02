@@ -12,16 +12,16 @@ API de palabras permitidas
 
 ##  Base de datos
 - Levantar el entorno de MongoDB
-- Abrir la terminar de mongo y crear una base de datos con el comando `use nombre_db`
+- Abrir la terminar de mongo y crear una base de datos con el comando `use nombre_db` ( En el ejercicio la bd se llamo palabras )
 - Copiar la cadena de conexión de la base de datos apuntando a la bd creada en el archivo .env que se encuentra en la raíz del proyecto y establecer el puerto para la API
 
 Archivo .env
 
 > PORT=8080
 >
-> MONGODB_CNN=cadena_de_conexion_de_mongo
+> MONGODB_CNN=mongodb://host/nombre_db
 
-Ejemplo
+Ejemplo: Nombre de db palabras
 > MONGODB_CNN=mongodb://192.168.100.146/palabras
 
  

@@ -31,3 +31,8 @@ En la raíz del proyecto ejecutar los siguientes comandos:
 - En LANGUAGE seleccionar HTTP para una mejor visualización
 
 > Enlace:  [Prueba MaxiPublica (getpostman.com)](https://documenter.getpostman.com/view/15453720/UVeFLRBU)
+
+## APP de pruebas
+- Puede ejecutar opcionalmente la siguiente app para consumir la API
+
+> Enlace: [APP MaxiPublica ](https://github.com/JaredLevi23/cliente-palabras-permitidas)

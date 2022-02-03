@@ -30,7 +30,7 @@ Archivo .env
 > MONGODB_CNN=mongodb://host/nombre_db
 
 Ejemplo: Nombre de db palabras
-> MONGODB_CNN=mongodb://192.168.100.146/palabras
+> MONGODB_CNN=mongodb://localhost/palabras
 
  
 ##  Levantar el entorno

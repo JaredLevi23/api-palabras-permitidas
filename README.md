@@ -27,7 +27,7 @@ Archivo .env
 
 > PORT=8080
 >
-> MONGODB_CNN=mongodb://host/nombre_db
+> MONGODB_CNN=mongodb://localhost/nombre_db
 
 Ejemplo: Nombre de db palabras
 > MONGODB_CNN=mongodb://localhost/palabras
